@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VeloQuest — El desafío está ahí afuera</title>
+<meta name="description" content="VeloQuest es una plataforma deportiva para ciclistas y runners de Santiago de Chile: graba tus salidas con GPS, gana XP y medallas, completa desafíos y compite en rutas icónicas.">
+<meta name="theme-color" content="#0f0f13">
+<style>
+  :root {
+    --bg: #0f0f13;
+    --surface: #16161c;
+    --surface2: #1c1c24;
+    --text: #ffffff;
+    --text2: #9b9aaa;
+    --border: rgba(255,255,255,0.08);
+    --accent: #9d86ff;
+    --link: #b5a4ff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f2f2f7;
+      --surface: #ffffff;
+      --surface2: #e9e9f1;
+      --text: #17171f;
+      --text2: #4f4e66;
+      --border: rgba(20,20,45,0.10);
+      --accent: #5a3fd6;
+      --link: #4a2fc0;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: var(--link); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 max(20px, env(safe-area-inset-left)); }
+  header { padding: 72px 0 40px; }
+  .marca { font-size: clamp(2.4rem, 8vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; margin: 0; }
+  .lema { margin: 10px 0 0; font-size: clamp(1rem, 3.4vw, 1.25rem); font-weight: 300; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+  .intro { margin: 28px 0 0; font-size: 1.1rem; color: var(--text2); max-width: 60ch; }
+  section { padding: 32px 0; border-top: 1px solid var(--border); }
+  h2 { margin: 0 0 16px; font-size: 1.3rem; letter-spacing: -0.01em; }
+  ul.cosas { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  ul.cosas li { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px 18px; }
+  ul.cosas b { display: block; margin-bottom: 2px; }
+  ul.cosas span { color: var(--text2); font-size: 0.97rem; }
+  .planes { display: grid; gap: 12px; }
+  @media (min-width: 640px) { .planes { grid-template-columns: 1fr 1fr; } }
+  .plan { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+  .plan h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .plan p { margin: 0; color: var(--text2); font-size: 0.97rem; }
+  .pronto { display: inline-block; margin-top: 8px; padding: 10px 18px; border-radius: 999px; background: var(--surface2); border: 1px solid var(--border); font-weight: 600; }
+  footer { padding: 32px 0 64px; border-top: 1px solid var(--border); color: var(--text2); font-size: 0.93rem; }
+  footer p { margin: 0 0 10px; }
+  nav.legal { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 14px 0; }
+  nav.legal a { padding: 6px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1 class="marca">VeloQuest</h1>
+    <p class="lema">El desafío está ahí afuera</p>
+    <p class="intro">VeloQuest es una plataforma deportiva para ciclistas y runners de Santiago de Chile. Graba tus salidas con GPS, gana XP, desbloquea medallas y completa desafíos en rutas icónicas de la ciudad.</p>
+  </header>
+
+  <section aria-labelledby="que-es">
+    <h2 id="que-es">Qué puedes hacer</h2>
+    <ul class="cosas">
+      <li><b>Graba tus salidas con GPS</b><span>VeloQuest registra tus actividades de ciclismo y running directamente desde la app.</span></li>
+      <li><b>Progresa como en un videojuego</b><span>Gana XP, sube de nivel y colecciona medallas que evolucionan con tu constancia.</span></li>
+      <li><b>Rutas icónicas de Santiago</b><span>Rutas y ascensos de la ciudad convertidos en retos que puedes coleccionar y repetir.</span></li>
+      <li><b>Desafíos y comunidad</b><span>Desafíos semanales y mensuales, equipos, duelos y una comunidad local para rodar acompañado.</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="planes">
+    <h2 id="planes">Gratis para empezar</h2>
+    <div class="planes">
+      <div class="plan">
+        <h3>Explorador</h3>
+        <p>Usa la app libremente y sin pagar: grabación con GPS, XP, niveles, medallas, desafíos y rutas Explorador, y equipos.</p>
+      </div>
+      <div class="plan">
+        <h3>Atleta</h3>
+        <p>Suscripción mensual o anual para el contenido exclusivo: rankings oficiales, rutas y colecciones Atleta, y duelos y desafíos de equipo.</p>
+      </div>
+    </div>
+    <p class="pronto">Próximamente en Google Play</p>
+  </section>
+
+  <section aria-labelledby="contacto">
+    <h2 id="contacto">Contacto</h2>
+    <p>¿Dudas, soporte o prensa? Escríbenos a <a href="mailto:contacto@veloquest.app">contacto@veloquest.app</a>.</p>
+  </section>
+
+  <footer>
+    <nav class="legal" aria-label="Documentos legales">
+      <a href="https://alvarovallejosh1981.github.io/veloquest-legal/legal/privacidad/">Política de privacidad</a>
+      <a href="https://alvarovallejosh1981.github.io/veloquest-legal/legal/terminos/">Términos y condiciones</a>
+      <a href="https://alvarovallejosh1981.github.io/veloquest-legal/legal/normas-comunidad/">Normas de la comunidad</a>
+    </nav>
+    <p>VeloQuest es un producto de CYCLING VELOQUEST SpA · Santiago, Chile.</p>
+    <p>&copy; 2026 CYCLING VELOQUEST SpA. Todos los derechos reservados.</p>
+  </footer>
+
+</div>
+</body>
+</html>
