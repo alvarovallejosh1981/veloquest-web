@@ -11,7 +11,7 @@
 <header>
   <a class="brand" href="/">VeloQuest</a>
   <h1>Política de Privacidad</h1>
-  <p class="meta">Versión 1.4.0 · Vigente desde el 14 de noviembre de 2026 · Chile</p>
+  <p class="meta">Versión 1.5.0 · Vigente desde el 15 de noviembre de 2026 · Chile</p>
 </header>
 
 <main>
@@ -95,6 +95,8 @@
   <li>Segmentos oficiales completados y tus tiempos en ellos.</li>
   <li>Experiencia (XP), nivel, medallas y racha de días activos.</li>
   <li>Estado de validación de la actividad (para detectar registros anómalos o duplicados).</li>
+  <li>Las rutas que fijas como objetivo, y los desafíos a los que te unes y cuándo. De un desafío, las
+    demás personas solo ven cuántos participan, no quiénes.</li>
 </ul>
 
 <h3>3.3.1 Fotos que añades a una actividad</h3>
@@ -217,6 +219,10 @@
   <li>El tablón del equipo: avisos y salidas con su fecha, su punto de encuentro (un texto que
     escribe quien publica) y quién confirmó que irá.</li>
   <li>Lo que aporta cada integrante a los desafíos y a la liga del equipo.</li>
+  <li>Un historial de las acciones de administración del equipo: qué se hizo (invitar, aceptar o
+    rechazar una solicitud, sacar a alguien, nombrar o quitar co-líderes, traspasar el liderazgo,
+    bloquear el chat, cambiar el logo…), a quién y cuándo. Solo pueden consultarlo quien lidera y
+    quienes co-lideran el equipo.</li>
 </ul>
 <p>
   Un equipo público o con solicitud lo puede ver cualquiera; uno privado, solo sus integrantes. La
@@ -233,7 +239,8 @@
     <strong>cualquier persona registrada</strong> en VeloQuest, no solo quienes te siguen.</li>
   <li><strong>Mensajes directos:</strong> solo pueden escribirse personas que se siguen
     mutuamente, que comparten un duelo aceptado o ya terminado, o que están en el mismo equipo, y solo las dos los
-    leen. Guardamos cuándo leyó cada una la conversación, para marcarte los mensajes sin leer.</li>
+    leen. Guardamos cuándo leyó cada una la conversación, para marcarte los mensajes sin leer; esa
+    marca la puede consultar también la otra persona de la conversación.</li>
 </ul>
 <p>
   En los tres casos guardamos el texto, quién lo escribió y cuándo. Antes de guardarlo, un filtro
@@ -351,6 +358,17 @@
   en vivo no muestra tu ubicación (punto 3.6.3).
 </p>
 <p>
+  <strong>La tarjeta para compartir.</strong> Desde una actividad tuya puedes crear una imagen para
+  compartirla fuera de VeloQuest. La imagen se genera <strong>en tu teléfono</strong> y sale solo hacia
+  donde tú la mandes: no la subimos a ningún servidor. Lleva el nombre de la actividad o de la ruta, la
+  fecha, la distancia, el tiempo, el desnivel, la experiencia (XP) y hasta cuatro logros que eliges (de
+  esa salida, como medallas, récords o puestos en una ruta, o tu racha, tu nivel, tus kilómetros o tu
+  puesto del mes), y la <strong>silueta de tu recorrido</strong>, dibujada sin mapa de fondo y con cada punta recortada
+  según el radio que elegiste en tu privacidad, <strong>nunca menos de 500 metros</strong>. No lleva tu
+  nombre ni tu foto de perfil. Si eliges una foto de fondo, se usa desde tu teléfono y no se guarda. Al
+  compartirla registramos solo que la compartiste, para darte su bono de experiencia.
+</p>
+<p>
   Si en el futuro añadimos una función para compartir el mapa completo fuera de VeloQuest, será una
   acción <strong>explícita y separada</strong>, con una advertencia previa. Ninguna opción de
   visibilidad social activa nunca la ruta completa.
@@ -391,10 +409,12 @@
   <tr><th>Proveedor</th><th>Para qué</th></tr>
   <tr><td>Supabase</td><td>Base de datos, autenticación, almacenamiento de fotos y funciones de servidor</td></tr>
   <tr><td>Mapbox</td><td>Mostrar los mapas, generar la imagen de tu recorrido y calcular indicaciones de ruta. Para eso recibe las coordenadas de tu recorrido, sin tu nombre ni tu correo</td></tr>
-  <tr><td>Google</td><td>Inicio de sesión con Google, si lo eliges, y entrega de las notificaciones push en Android (Firebase Cloud Messaging)</td></tr>
+  <tr><td>Google</td><td>Inicio de sesión con Google, si lo eliges; entrega de las notificaciones push en Android (Firebase Cloud Messaging), y la bandeja de correo donde recibimos lo que nos escribes a contacto@veloquest.app</td></tr>
   <tr><td>RevenueCat</td><td>Gestionar la suscripción a Atleta. Recibe tu identificador interno, nunca tu correo ni tu nombre, y los datos de tus compras en la tienda</td></tr>
   <tr><td>Expo / EAS</td><td>Compilación y distribución de la aplicación, y envío de las notificaciones push</td></tr>
   <tr><td>Resend</td><td>Envío de correos, como la confirmación de que tu cuenta fue eliminada</td></tr>
+  <tr><td>Cloudflare</td><td>Registro y DNS del dominio veloquest.app, y reenvío de los correos que nos escribes a contacto@veloquest.app</td></tr>
+  <tr><td>GitHub Pages</td><td>Alojamiento de esta web y de los textos legales. Recibe la dirección IP de quien los visita</td></tr>
   <tr><td>Apple App Store / Google Play</td><td>Distribución de la aplicación y cobro de la suscripción a Atleta</td></tr>
 </table>
 </div>
@@ -422,12 +442,16 @@
   <tr><td>Actividades marcadas como anómalas (validación)</td><td>Mientras exista tu cuenta, para prevención de abuso. Se borran al eliminar la cuenta.</td></tr>
   <tr><td>Fotos que añades a una actividad, con su hora de captura y su posición en tu recorrido</td><td>Hasta que las borres tú, o hasta que elimines tu cuenta. Al borrar una foto se elimina también su archivo, su hora y su posición.</td></tr>
   <tr><td>Datos de relación social (seguidores, bloqueos)</td><td>Mientras exista tu cuenta.</td></tr>
+  <tr><td>Rutas que fijas como objetivo y desafíos a los que te unes</td><td>Mientras exista tu cuenta. Un objetivo se borra cuando lo quitas; al abandonar un desafío se borra tu participación en el periodo en curso, y las de periodos anteriores se conservan.</td></tr>
+  <tr><td>Historial de administración de un equipo</td><td>Mientras exista el registro del equipo, que se conserva oculto aunque el equipo se dé de baja. Si eliminas tu cuenta, las acciones en las que aparecías quedan sin tu identificador.</td></tr>
   <tr><td>Mensajes de los chats y mensajes directos, incluidos los retirados</td><td>Mientras exista tu cuenta. Un mensaje retirado del chat de equipo o del de una ruta, 30 días desde que se retiró, o hasta que venza su denuncia si la tiene. Una conversación de mensajes directos se borra también si la otra persona elimina su cuenta. Las ubicaciones compartidas en el chat de equipo, 24 horas (o mientras estén fijadas), salvo que las retires antes.</td></tr>
   <tr><td>Denuncias, con su copia del perfil o del equipo</td><td>12 meses, con sus copias de la foto de perfil, la portada o el logo. Antes de eso, la denuncia se borra cuando se elimina la cuenta de quien denunció o, si es de un perfil, la de quien fue denunciado, o si es de un equipo, cuando el equipo se elimina; sus copias se borran con ella, a más tardar en dos días.</td></tr>
   <tr><td>Eventos de uso de la aplicación</td><td>12 meses.</td></tr>
   <tr><td>Avisos del centro de notificaciones</td><td>90 días.</td></tr>
   <tr><td>Sesión sin registro (punto 12), con el identificador de notificaciones que guarde</td><td>30 días sin actividad. Si creas una cuenta con tu correo en ese teléfono, pasa a ser tu cuenta.</td></tr>
   <tr><td>Aceptaciones legales</td><td>Mientras exista tu cuenta (prueba del consentimiento).</td></tr>
+  <tr><td>Registro de tu solicitud de eliminación</td><td>Mientras sea necesario para acreditar que la atendimos. Guarda tu identificador interno, la vía (desde la aplicación o por correo), las fechas, el estado y, si algo falló, una nota técnica; no tu nombre ni tu correo. También lo usamos para que los avisos de la tienda sobre tu suscripción que lleguen después de la baja no vuelvan a quedar asociados a ti.</td></tr>
+  <tr><td>Correos que nos escribes a contacto@veloquest.app</td><td>En nuestra bandeja, mientras sean necesarios para atenderte. Si es una solicitud de eliminación, mientras sea necesario para acreditar que la atendimos.</td></tr>
 </table>
 </div>
 <p>
@@ -441,7 +465,11 @@
     dentro de mensajes de otras personas en los que te mencionaron;</li>
   <li>los <strong>equipos que creaste</strong>, que siguen existiendo para sus integrantes, con su nombre,
     su descripción y su logo, y pasan a liderarlos otras personas;</li>
-  <li>el <strong>registro de tu solicitud de eliminación</strong>, para acreditar que la atendimos (ver
+  <li>el <strong>historial de administración de los equipos</strong> en los que estuviste (qué se hizo y
+    cuándo), <strong>sin tu identificador</strong>. Si liderabas un equipo, queda anotado que, por la baja
+    de tu cuenta, el liderazgo pasó a otra persona o, si no quedaba nadie, que el equipo se dio de baja;</li>
+  <li>el <strong>registro de tu solicitud de eliminación</strong>, para acreditar que la atendimos, con los
+    datos que indica la tabla de arriba, y, si la pediste por correo, ese correo en nuestra bandeja (ver
     <a href="/eliminar-cuenta">esta página</a>).</li>
 </ul>
 <p>
@@ -510,7 +538,7 @@
     <a href="/legal/normas-comunidad">Normas de comunidad</a> ·
     <a href="/eliminar-cuenta">Eliminar cuenta</a>
   </p>
-  <p>Versión 1.4.0 — Vigente desde el 14 de noviembre de 2026</p>
+  <p>Versión 1.5.0 — Vigente desde el 15 de noviembre de 2026</p>
 </footer>
 
 </body>
